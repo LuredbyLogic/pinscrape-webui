@@ -37,7 +37,7 @@ def run_scraper(method, keyword, output_folder, images_to_download, num_workers,
     try:
         if method == "Search Engine (Recommended)":
             details = scraper.scrape(
-                keyword=keyword, 
+                keyword=, 
                 output_folder=output_folder, 
                 proxies=proxies, 
                 number_of_workers=num_workers, 
