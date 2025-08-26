@@ -26,7 +26,7 @@ Make sure you have Python 3.7+ installed.
 
 1.  **Clone the repository (or just save the script):**
     ```bash
-    git clone https://github.com/your-username/pinscrape-gradio.git
+    git clone https://github.com/LuredbyLogic/pinscrape-gradio.git
     cd pinscrape-gradio
     ```
 
