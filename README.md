@@ -63,5 +63,5 @@ Make sure you have Python 3.7+ installed.
 
 ## Credits
 
-- This UI is a wrapper for the excellent [pinscrape](https://github.com/derhnyel/pinscrape) library by derhnyel.
+- This UI is a wrapper for the excellent [pinscrape](https://pypi.org/project/pinscrape/)) library by Atul Singh.
 - The web interface is built using the [Gradio](https://www.gradio.app/) framework.
