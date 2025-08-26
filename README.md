@@ -2,8 +2,7 @@
 
 A user-friendly web interface for the powerful `pinscrape` Python library. This application allows you to easily download images from Pinterest by searching for keywords or providing a direct board/pin URL, all without writing any code.
 
- 
-*(You should replace this with a real screenshot of your running application)*
+<img width="249" height="218" alt="logo" src="https://github.com/user-attachments/assets/7e4c4464-d7c1-48b1-bc08-faa9fff9039f" />
 
 ---
 
