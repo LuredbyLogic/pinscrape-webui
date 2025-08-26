@@ -36,12 +36,11 @@ def run_scraper(method, keyword, output_folder, images_to_download, num_workers,
     
     try:
         if method == "Search Engine (Recommended)":
-            log_output += "Note: 'Number of Workers' is ignored for the 'Search Engine' method.\n"
             details = scraper.scrape(
                 keyword, 
                 output_folder=output_folder, 
                 proxies=proxies, 
-                # FIXED: Removed the unsupported 'number_of_workers' argument.
+                number_of_workers=num_workers, 
                 max_images=images_to_download
             )
             if details.get("isDownloaded"):
@@ -57,7 +56,6 @@ def run_scraper(method, keyword, output_folder, images_to_download, num_workers,
             images_urls = p.search(keyword, images_to_download)
             log_output += f"Found {len(images_urls)} image URLs via API.\n"
             if images_urls:
-                # This part was already correct and remains unchanged.
                 details = p.download(
                     url_list=images_urls, 
                     number_of_workers=num_workers, 
@@ -70,7 +68,7 @@ def run_scraper(method, keyword, output_folder, images_to_download, num_workers,
                 log_output += "No images found to download.\n"
         
         else:
-            return "Error: Invalid method selected.", []
+             return "Error: Invalid method selected.", []
 
     except Exception as e:
         log_output += f"\nAn error occurred: {str(e)}"
@@ -93,7 +91,7 @@ def run_scraper(method, keyword, output_folder, images_to_download, num_workers,
 
     return log_output, downloaded_images[:100] # Return log and a limited number of images for the gallery
 
-# --- Gradio UI Definition (No changes needed for this fix) ---
+# --- Gradio UI Definition ---
 
 with gr.Blocks(theme=gr.themes.Soft(), title="PinScrape UI") as demo:
     gr.Markdown("# 🖼️ Pinterest Scraper UI")
